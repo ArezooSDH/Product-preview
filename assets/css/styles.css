@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Vazirmatn;
+  src: url("../font/Vazirmatn-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Font Awesome 5 light';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src:
+    url("../font/fa-light-300.woff2") format("woff2")
+}
+
+* {
+  font-family: Vazirmatn, sans-serif;
+}
+
+body {
+  direction: rtl;
+  background-color: antiquewhite;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.wrapper {
+  background-color: #fff;
+  width: 35vw;
+  height: 50vh;
+  border-radius: 10px;
+  display: flex;
+}
+
+.image {
+  width: 50%;
+  background-image: url(../images/set-tools-with-copy-space_23-2148393118.webp);
+  border-radius: 0px 10px 10px 0px;
+}
+
+.imageDetails {
+  width: 45%;
+  font-size: 13px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.imageDetails>p:first-child {
+  letter-spacing: 3px;
+}
+
+#image-text {
+  width: 100%;
+  line-height: 17px;
+  text-align: justify;
+}
+
+.cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.realCost {
+  text-decoration-line: line-through;
+}
+
+.discountedCost {
+  color: rgb(228, 183, 3);
+}
+
+.cartButton {
+  width: 100%;
+  height: 80%;
+  background-color: rgb(228, 183, 3);
+  border: 0px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartButton ::before {
+  font-family: 'Font Awesome 5 light';
+  content: "\f07a";
+  font-size: 17px;
+  color: black;
+
+}
+
+.cart {
+  font-size: 15px;
+}
+
+
+@media screen and (max-width:1461px) {
+  .wrapper {
+    height: 85%;
+    width: 25%;
+    flex-direction: column;
+  }
+  .image{
+    height: 42%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .imageDetails{
+    width: 91%;
+    height: 50%;
+  }
+}
+@media screen and (max-width:1033px) {
+  .cost{
+    flex-direction: column;
+  }
+  .wrapper{
+    height: 95%;
+  }
+  .cartButton{
+    width: 60%;
+    height: 70%;
+  }
+  .cart{
+    font-size: 10px;
+    padding-bottom: 5px;
+    
+  }
+  .imageDetails{
+    align-items: stretch;
+  }
+  .cartBox{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+@media screen and (max-width:1024px) {
+  .wrapper{
+    width: 40%;
+  }
+}
+@media screen and (max-width:540px) {
+  .wrapper{
+    width: 70%;
+  }
+}
